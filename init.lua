@@ -50,3 +50,7 @@ keys.cE = buffer.line_end_extend
 keys.aright, keys.aleft   = buffer.word_right, buffer.word_left
 
 require 'folding_commands'
+
+events.connect(events.INITIALIZED, function()
+  textredux = require 'textredux.hijack'
+end)
